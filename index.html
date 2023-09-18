@@ -1,0 +1,638 @@
+<!--
+=========================================================
+* Material Kit 2 - v3.0.4
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/material-kit 
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+<link rel="icon" type="image/png" href="./assets/img/favicon.png">
+
+<title>
+  
+
+  
+  Material Kit 2 by Creative Tim
+
+  
+</title>
+
+
+
+<!--     Fonts and icons     -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+
+<!-- Nucleo Icons -->
+<link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+<link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+<!-- CSS Files -->
+
+
+
+<link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.4" rel="stylesheet" />
+
+
+
+
+
+<!-- Nepcha Analytics (nepcha.com) -->
+<!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+<script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+</head>
+
+<body class="index-page bg-gray-200">
+<!-- Navbar -->
+<div class="container-fluid position-sticky z-index-sticky top-0">
+  <div class="row">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-1 px-0 px-md-5 start-0 end-0 mx-0 mx-md-4">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Support</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Move the "Request for free demo" button to the right on larger screens -->
+        <div class="ms-lg-auto">
+          <a href="#" class="btn btn-sm bg-gradient-primary mb-0 me-1 mt-2 mt-md-0" id="button-nav">Request for free demo</a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<header class="header-2">
+  <div class="page-header min-vh-75 relative" style="background-image: url('./assets/img/bg2.jpg'); background-size: cover; background-position: center;">
+    <span class="mask bg-gradient-primary opacity-4"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 text-center mx-auto">
+          <h1 class="text-white pt-3 mt-5 mb-3">Bullion Trading <br>Management Solutions</h1>
+          <p class="lead text-white">A CRM solution is essential for your bullion trade operation and vital for your business realization as it ensures that you do not alienate your traders, partners, investors, and clients.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="part-1">
+  <img src="./assets/lap.png" width="700px" height="auto" class="lapimage">
+  <a href="form.html" class="bg-gradient-primary  me-1 bu-1 ">Get brochure</a>
+
+</div><div style="display: flex; flex-wrap: wrap;" class="part-2">
+  <div class="bg-gradient-primary me-1 bu-2 mb-1" onclick="toggleContent('crmContent')">CRM Admin Back Office</div>
+  <div class="bg-gradient-primary me-1 bu-2 mb-1" onclick="toggleContent('ibContent')">IB Portal</div>
+  <div class="bg-gradient-primary me-1 bu-2 mb-1" onclick="toggleContent('clientContent')">Client Portal</div>
+</div>
+
+<div id="crmContent" style="display: none;">
+  <!-- Content for CRM Admin Back Office -->
+  <p class="bu-content"> CRM Admin Back Office.</p>
+</div>
+
+<div id="ibContent" style="display: none;">
+  <!-- Content for IB Portal -->
+  <p class="bu-content">IB Portal.</p>
+</div>
+
+<div id="clientContent" style="display: none;">
+  <!-- Content for Client Portal -->
+  <p class="bu-content"> Client Portal.</p>
+</div>
+
+<script>
+  var currentContent = null; // Store the currently displayed content
+
+  function toggleContent(contentId) {
+      var content = document.getElementById(contentId);
+
+      // Hide the currently displayed content (if any)
+      if (currentContent !== null) {
+          currentContent.style.display = "none";
+      }
+
+      // If the clicked content is not the currently displayed one, show it
+      if (content !== currentContent) {
+          content.style.display = "block";
+          currentContent = content;
+      } else { // If it's the same content, hide it
+          content.style.display = "none";
+          currentContent = null;
+      }
+  }
+</script>
+
+
+
+
+<div class="container">
+  <h6 class="font-weight-bolder text-center" style="font-size: 30px; margin-top: 20px;">
+    Client Portal
+  </h6>
+  <div class="row">
+    <div class="col-md-6 text-center" style="padding: 20px;">
+      Our User-friendly Client portal,
+      Will Effectively Connect you with your clients by using built-in advertising space and custom notifications, enabling clients to make quick deposits using any of the major payment service providers that come pre-integrated into the platform. You’ll be able to manage your visual identity across signups, login screens, emails, and deposits.
+
+      Offer custom language forms and portal interfaces to make it easier for traders to start their journey with you. Clients can open accounts directly from your web forms, get emailed login details automatically, and make a deposit within minutes. Then, enable clients to make quick deposits using any of the major payment service providers that come pre-integrated into the platform.
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="./assets/img/tab.webp" class="img-fluid" alt="Tablet" style="max-width: 100%;">
+    </div>
+  </div>
+  <div class="text-center">
+    <a href="" class="btn btn-primary" style="margin-bottom: 50px;">Get Brochure</a>
+  </div>
+</div>
+
+<div class="container">
+  <h6 class="font-weight-bolder text-center" style="font-size: 30px; margin-top: 20px;">
+    Client Portal
+  </h6>
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <img src="./assets/img/phone34.png" class="img-fluid" alt="Phone" style="max-width: 100%;">
+    </div>
+    <div class="col-md-6" style="text-align: left; padding: 20px;">
+      <p>Our User-friendly Client portal, Will Effectively Connect you with your clients by using built-in advertising space and custom notifications, enabling clients to make quick deposits using any of the major payment service providers that come pre-integrated into the platform. You’ll be able to manage your visual identity across signups, login screens, emails, and deposits.</p>
+      <p>Offer custom language forms and portal interfaces to make it easier for traders to start their journey with you. Clients can open accounts directly from your web forms, get emailed login details automatically, and make a deposit within minutes. Then, enable clients to make quick deposits using any of the major payment service providers that come pre-integrated into the platform.</p>
+      <div class="d-flex mt-4">
+        <div class="bg-dark text-white p-2 rounded" style="width: 185px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+          <a href="#" class="install-bu text-white">
+            <img src="./assets/img/google-play.png" width="30px" alt="Google Play" class="app">
+            &nbsp;&nbsp;Get it on Google Play
+            <div> Store</div>
+          </a>
+        </div>
+        <div class="bg-dark text-white p-2 rounded ml-3" style="width: 185px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+          <a href="#" class="install-bu text-white">
+            <img src="./assets/img/apple.png" width="30px" alt="Apple" class="app">
+            &nbsp;&nbsp;Get it 
+            <div>On App Store</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <a href="#" class="btn btn-primary" style="margin-top: 50px;">Get Brochure</a>
+  </div>
+</div>
+
+
+
+
+ </div>
+ <div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card" id="card">
+        <h2 class="head-2">Secure Login</h2>
+        <div class="card-div">
+          A secure, encrypted login process is essential for any web-based trading application. We ensure that users' confidential data is kept safe and secure.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card" id="card">
+        <h2 class="head-2">Real-Time Data</h2>
+        <div class="card-div">
+          Having access to real-time data and market information is a key feature of any web-based trading application. Our solution allows traders to make informed decisions about their trades.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card" id="card">
+        <h2 class="head-2">Charting Analysis</h2>
+        <div class="card-div">
+          Charts and analysis tools are essential for traders to make informed decisions about their trades. Our trading application provides powerful tools to analyze the market and make profitable trades.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card" id="card">
+        <h2 class="head-2">Order Placement</h2>
+        <div class="card-div">
+          The ability to place orders quickly and easily is an important feature of any trading application. Here, our web application should provide a secure, user-friendly interface for placing orders.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card" id="card">
+        <h2 class="head-2">Automated Trading</h2>
+        <div class="card-div">
+          Automated trading is becoming increasingly popular among traders. Our trading application provides automated trading capabilities to help traders manage their trades and maximize their profits.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="card" id="card">
+        <h2 class="head-2">Risk Management</h2>
+        <div class="card-div">
+          Risk management is critical for any trading application. Our trading application provides tools to help traders manage their risk and make profitable trades.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="text-center mt-5">
+    <a href="#" class="btn btn-primary btn-lg">
+      Learn more about apps
+    </a>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <h6 class="font-weight-bolder text-center mt-5" style="font-size: 40px;">
+    Big Screens for Big Traders
+  </h6>
+
+  <div class="d-flex flex-wrap justify-content-center align-items-start mt-5">
+    <img src="./assets/img/tv2.png" alt="Desktop" width="400px">
+    <div class="ml-md-5 mt-4 mt-md-0">
+      <h2 class="text-center">Desktop</h2>
+      <p>
+        Here, we make it possible to provide the best experience by showing Bullion Live Trade rates with the help of the best technology and hardware. The audience can view and analyze commodities listed by clients, live rates of commodities, news and feeds of bullion trading, and international clocks. The solution helps understand things quickly and effectively, making it the best part of your marketing strategy. Take a tour of our best-in-industry solution.
+      </p>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="#" class="btn btn-primary">
+      Try Web Link
+    </a>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="d-flex flex-wrap justify-content-center align-items-start mt-5">
+    <div class="mr-md-5">
+      <h2 class="text-center">Live Bullion Trade TV Screen</h2>
+      <p>
+        Here, we make it possible to provide the best experience by showing Bullion Live Trade rates with the help of the best technology and hardware. The audience can view and analyze commodities listed by clients, live rates of commodities, news and feeds of bullion trading, and international clocks. The solution helps understand things quickly and effectively, making it the best part of your marketing strategy. Take a tour of our best-in-industry solution.
+      </p>
+    
+    </div>
+    <img src="./assets/img/tvscreen2.png" alt="TV Screen" width="400px">
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="#" class="btn btn-primary">
+      Try Web Link
+    </a>
+  </div>
+</div>
+
+       
+       <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card" id="card">
+              <h2 class="head-2">Secure Login</h2>
+              <div class="card-div">
+                A secure, encrypted login process is essential for any web-based trading application. We ensure that users' confidential data is kept safe and secure.
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card" id="card">
+              <h2 class="head-2">Real-Time Data</h2>
+              <div class="card-div">
+                Having access to real-time data and market information is a key feature of any web-based trading application. Our solution allows traders to make informed decisions about their trades.
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card" id="card">
+              <h2 class="head-2">Charting Analysis</h2>
+              <div class="card-div">
+                Charts and analysis tools are essential for traders to make informed decisions about their trades. Our trading application provides powerful tools to analyze the market and make profitable trades.
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card" id="card">
+              <h2 class="head-2">Order Placement</h2>
+              <div class="card-div">
+                The ability to place orders quickly and easily is an important feature of any trading application. Here, our web application should provide a secure, user-friendly interface for placing orders.
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card" id="card">
+              <h2 class="head-2">Automated Trading</h2>
+              <div class="card-div">
+                Automated trading is becoming increasingly popular among traders. Our trading application provides automated trading capabilities to help traders manage their trades and maximize their profits.
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card" id="card">
+              <h2 class="head-2">Risk Management</h2>
+              <div class="card-div">
+                Risk management is critical for any trading application. Our trading application provides tools to help traders manage their risk and make profitable trades.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="text-center mt-5">
+          <a href="#" class="btn btn-primary btn-lg">
+            Learn more about apps
+          </a>
+        </div>
+      </div>
+      
+   
+      <div class="container">
+        <div class="mt-5">
+          <div class="d-flex flex-wrap justify-content-center align-items-start">
+            <img src="./assets/img/phone34.png" alt="Mobile Phone" width="400px">
+            <div class="ml-md-5 mt-4 mt-md-0">
+              <h2>Mobile Web Access for Bullion Live Rate</h2>
+              <p>
+                It’s likely buyers may not want to install the app but to check the functionality only. The QR link we provide allows businesses to address this challenge and capture a chunk of those users from the market.
+              </p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="mt-5">
+          <div class="d-flex flex-wrap justify-content-center align-items-start bg-dark text-white p-4 rounded">
+            <div class="mr-md-5">
+              <h3>Want to learn more</h3>
+              <p>Our representatives are happy to guide you through our system or solve any questions you might have.</p>
+            </div>
+            <a href="#" class="btn btn-primary btn-sm align-self-end">
+              Request for Free Demo
+            </a>
+          </div>
+        </div>
+      </div>
+      
+
+      <footer class="footer bg-gradient-primary text-white py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-12 mb-4">
+              <div class="text-center mb-4">
+                <a href="https://www.creative-tim.com/product/material-kit">
+                  <img src="./assets/img/logo-ct-dark.png" class="mb-3 footer-logo" alt="main_logo">
+                </a>
+                <h6 class="font-weight-bolder">Bullionstats</h6>
+              </div>
+              <div class="text-center">
+                <ul class="d-flex flex-row justify-content-center ms-n3 nav">
+                  <li class="nav-item">
+                    <a class="nav-link pe-2" href="https://www.facebook.com/CreativeTim" target="_blank">
+                      <i class="fab fa-facebook text-lg opacity-8"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pe-2" href="https://twitter.com/creativetim" target="_blank">
+                      <i class="fab fa-twitter text-lg opacity-8"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pe-2" href="https://dribbble.com/creativetim" target="_blank">
+                      <i class="fab fa-dribbble text-lg opacity-8"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pe-2" href="https://github.com/creativetimofficial" target="_blank">
+                      <i class="fab fa-github text-lg opacity-8"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pe-2" href="https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w"
+                      target="_blank">
+                      <i class="fab fa-youtube text-lg opacity-8"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="col-md-4 col-sm-12 mb-4">
+              <h6 class="text-sm">Contact Us</h6>
+              <address>
+                KSITIL Special Economic Zone, Unit No. 26, Upper Basement, Sahya Building Govt. Cyberpark, Nellikode, PO,
+                Kozhikode, Kerala 673016, INDIA | UAE
+                <br>
+                Email: support@bullionview.com
+              </address>
+            </div>
+      
+            <div class="col-md-4 col-sm-12 mb-4">
+              <h6 class="text-sm">Newsletter</h6>
+              <p>Subscribe to our newsletter for the latest updates.</p>
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Enter your email">
+                <button class="btn btn-light" type="button">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      
+      
+
+
+
+
+
+
+
+
+
+<!--   Core JS Files   -->
+<script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+
+
+
+
+<!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+<script src="./assets/js/plugins/countup.min.js"></script>
+
+
+
+
+
+<script src="./assets/js/plugins/choices.min.js"></script>
+
+
+
+<script src="./assets/js/plugins/prism.min.js"></script>
+<script src="./assets/js/plugins/highlight.min.js"></script>
+
+
+
+<!--  Plugin for Parallax, full documentation here: https://github.com/dixonandmoe/rellax -->
+<script src="./assets/js/plugins/rellax.min.js"></script>
+<!--  Plugin for TiltJS, full documentation here: https://gijsroge.github.io/tilt.js/ -->
+<script src="./assets/js/plugins/tilt.min.js"></script>
+<!--  Plugin for Selectpicker - ChoicesJS, full documentation here: https://github.com/jshjohnson/Choices -->
+<script src="./assets/js/plugins/choices.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+<!--  Google Maps Plugin    -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+<script src="./assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+if (document.getElementById('state1')) {
+const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+if (!countUp.error) {
+  countUp.start();
+} else {
+  console.error(countUp.error);
+}
+}
+if (document.getElementById('state2')) {
+const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+if (!countUp1.error) {
+  countUp1.start();
+} else {
+  console.error(countUp1.error);
+}
+}
+if (document.getElementById('state3')) {
+const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+if (!countUp2.error) {
+  countUp2.start();
+} else {
+  console.error(countUp2.error);
+};
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
