@@ -141,7 +141,7 @@
     <div class="row align-items-center">
       <div class="col-lg-4 ms-auto me-auto p-lg-4 mt-lg-0 mt-4">
         <h6 class="font-weight-bolder text-center" style="font-size: 30px;padding-bottom:140px;">
-          Characteristics/futures        </h6>
+          Characteristics/features        </h6>
         <div class="rotating-card-container">
           
           <div class="card card-rotate card-background card-background-mask-primary shadow-primary mt-md-0 mt-5">
@@ -603,6 +603,74 @@ while establishing a brokerage firm?</h3>
     </div>
   </div>
 </section>
+
+
+<h1 class="text-center" >Brochure Request Form</h1>
+<form id="brochureForm">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name"  style="border:2px solid rgb(218, 208, 208);">
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email"  style="border:2px solid rgb(218, 208, 208);" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="contact_number">Contact Number:</label>
+        <input type="tel" class="form-control" id="contact_number" name="contact_number"  style="border:2px solid rgb(218, 208, 208);"  required>
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" name="message" rows="4"  style="border:2px solid rgb(218, 208, 208);" required></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div id="errorMessages" class="text-danger mt-3"></div>
+</div>
+
+<!-- Include Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+const form = document.getElementById("brochureForm");
+const errorMessages = document.getElementById("errorMessages");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    errorMessages.innerHTML = "";
+
+    const name = form.name.value;
+    const email = form.email.value;
+    const contactNumber = form.contact_number.value;
+
+    // Basic email format validation
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!email.match(emailPattern)) {
+        errorMessages.innerHTML += "Invalid email address.<br>";
+    }
+
+    // Check if contact_number contains only numbers
+    const contactNumberPattern = /^[0-9]+$/;
+    if (!contactNumber.match(contactNumberPattern)) {
+        errorMessages.innerHTML += "Contact number should contain only numbers.<br>";
+    }
+
+    if (errorMessages.innerHTML === "") {
+        // Form is valid, you can proceed with form submission
+        // You can also use AJAX to submit the data to the server
+        alert("Form submitted successfully!");
+        form.reset();
+    }
+});
+</script>
+
 
 
       <footer class="footer pt-5 mt-5" id="footer">
